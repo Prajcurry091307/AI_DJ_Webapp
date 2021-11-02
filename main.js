@@ -53,8 +53,7 @@ function draw()
     circle(leftWristX, leftWristY,20);
     InNumberleftWristY = Number(leftWristY);
     remove_decimals = floor(InNumberleftWristY);
-    leftWristY_divide_1000 = remove_decimals/1000;
-    volume = leftWristY_divide_1000 *2;
+    volume = remove_decimals/500;
     console.log(volume);
     console.log(scoreLeftWrist);
     document.getElementById("volume").innerHTML = "Volume = "+volume;
@@ -65,7 +64,7 @@ function draw()
 
 function play()
 {
-    song.play();
+   // song.play();
     song.setVolume(1);
     song.rate(1);
 }
