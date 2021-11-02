@@ -56,6 +56,7 @@ function draw()
     leftWristY_divide_1000 = remove_decimals/1000;
     volume = leftWristY_divide_1000 *2;
     console.log(volume);
+    console.log(scoreLeftWrist);
     document.getElementById("volume").innerHTML = "Volume = "+volume;
     song.setVolume(volume);
 
