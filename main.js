@@ -55,8 +55,10 @@ function draw()
     remove_decimals = floor(InNumberleftWristY);
     leftWristY_divide_1000 = remove_decimals/1000;
     volume = leftWristY_divide_1000 *2;
-    document.getElementById("volume").innerHTML = "Vo;ume = "+volume;
+    console.log(volume);
+    document.getElementById("volume").innerHTML = "Volume = "+volume;
     song.setVolume(volume);
+
     }
 }
 
