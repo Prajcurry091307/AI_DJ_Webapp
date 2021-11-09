@@ -1,3 +1,4 @@
+//V 1.5
 leftWristX = 0;
 leftWristY = 0;
 rightWristX = 0;
@@ -53,7 +54,7 @@ function draw()
     stroke("#ff0000");
  
     circle(rightWristX, rightWristY,20);
-if(scoreWrist>0.2)
+if(scoreRightWrist>0.2)
 {
     if(rightWristY>0 && rightWristY<=100)
     {
