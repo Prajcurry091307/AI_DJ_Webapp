@@ -1,4 +1,6 @@
 //V 1.5
+song="";
+
 leftWristX = 0;
 leftWristY = 0;
 rightWristX = 0;
@@ -6,7 +8,6 @@ rightWristY = 0;
 scoreLeftWrist = 0;
 scoreRightWrist =0;
 
-var song="";
 
 function preload()
 {
@@ -35,7 +36,7 @@ function gotPoses(results)
     {
         console.log(results);
         scoreRightWrist = results[0].pose.keypoints[10].score * 100;
-        scoreLeftWrist = results[0].pose.keypoints[9].score * 10;
+        scoreLeftWrist = results[0].pose.keypoints[9].score * 100;
         console.log("scoreRightWrist =" +scoreRightWrist +"scoreLeftWrist = "+ scoreLeftWrist);
         leftWristX = results[0].pose.leftWrist.x;
         leftWristY = results[0].pose.leftWrist.y;
@@ -53,9 +54,10 @@ function draw()
     fill("#ff0000");
     stroke("#ff0000");
  
-    circle(rightWristX, rightWristY,20);
 if(scoreRightWrist>0.2)
 {
+    circle(rightWristX, rightWristY,20);
+
     if(rightWristY>0 && rightWristY<=100)
     {
         document.getElementsById("speed").innerHTML = "Speed = 0.5x";
@@ -89,14 +91,14 @@ if(scoreRightWrist>0.2)
 
 
     if (scoreLeftWrist > 0.2){
-    circle(leftWristX, leftWristY,20);
-    InNumberleftWristY = Number(leftWristY);
-    remove_decimals = floor(InNumberleftWristY);
-    volume = remove_decimals/1000;
-    console.log(volume);
-    console.log(scoreLeftWrist);
-    document.getElementById("volume").innerHTML = "Volume = "+volume;
-    song.setVolume(volume);
+        circle(leftWristX, leftWristY,20);
+        InNumberleftWristY = Number(leftWristY);
+        remove_decimals = floor(InNumberleftWristY);
+        volume = remove_decimals/1000;
+        console.log(volume);
+        console.log(scoreLeftWrist);
+        document.getElementById("volume").innerHTML = "Volume = "+volume;
+        song.setVolume(volume);
 
     }
 }
