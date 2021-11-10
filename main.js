@@ -62,25 +62,25 @@ if(scoreRightWrist>0.2)
         song.rate(0.5);
     }
 
-    if(rightWristY>100 && rightWristY<=200)
+    else if(rightWristY>100 && rightWristY<=200)
     {
         document.getElementsById("speed").innerHTML = "Speed = 1x";
         song.rate(1);
     }
 
-    if(rightWristY>200 && rightWristY<=300)
+    else if(rightWristY>200 && rightWristY<=300)
     {
         document.getElementsById("speed").innerHTML = "Speed = 1.5x";
         song.rate(1.5);
     }
 
-    if(rightWristY>300 && rightWristY<=400)
+    else if(rightWristY>300 && rightWristY<=400)
     {
         document.getElementsById("speed").innerHTML = "Speed = 2x";
         song.rate(2);
     }
 
-    if(rightWristY>400 && rightWristY<=500)
+    else if(rightWristY>400)
     {
         document.getElementsById("speed").innerHTML = "Speed = 2.5x";
         song.rate(2.5);
@@ -92,7 +92,7 @@ if(scoreRightWrist>0.2)
     circle(leftWristX, leftWristY,20);
     InNumberleftWristY = Number(leftWristY);
     remove_decimals = floor(InNumberleftWristY);
-    volume = remove_decimals/500;
+    volume = remove_decimals/1000;
     console.log(volume);
     console.log(scoreLeftWrist);
     document.getElementById("volume").innerHTML = "Volume = "+volume;
