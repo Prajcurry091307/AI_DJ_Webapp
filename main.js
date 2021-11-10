@@ -60,31 +60,31 @@ if(scoreRightWrist>0.2)
 
     if(rightWristY>0 && rightWristY<=100)
     {
-        document.getElementsById("speed").innerHTML = "Speed = 0.5x";
+        document.getElementById("speed").innerHTML = "Speed = 0.5x";
         song.rate(0.5);
     }
 
     else if(rightWristY>100 && rightWristY<=200)
     {
-        document.getElementsById("speed").innerHTML = "Speed = 1x";
+        document.getElementById("speed").innerHTML = "Speed = 1x";
         song.rate(1);
     }
 
     else if(rightWristY>200 && rightWristY<=300)
     {
-        document.getElementsById("speed").innerHTML = "Speed = 1.5x";
+        document.getElementById("speed").innerHTML = "Speed = 1.5x";
         song.rate(1.5);
     }
 
     else if(rightWristY>300 && rightWristY<=400)
     {
-        document.getElementsById("speed").innerHTML = "Speed = 2x";
+        document.getElementById("speed").innerHTML = "Speed = 2x";
         song.rate(2);
     }
 
     else if(rightWristY>400)
     {
-        document.getElementsById("speed").innerHTML = "Speed = 2.5x";
+        document.getElementById("speed").innerHTML = "Speed = 2.5x";
         song.rate(2.5);
     }
 }
